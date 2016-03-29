@@ -16,6 +16,13 @@ sudo: false
 matrix:
   include:
      # Linux
+      - os: linux
+       compiler: ": gcc-release-node-v4"
+       env: NODE="4" TARGET=Release CC="gcc-4.8" CXX="g++-4.8" PUBLISHABLE=true
+       addons:
+         apt:
+           sources: [ 'ubuntu-toolchain-r-test' ]
+           packages: [ 'g++-4.8' ]
      - os: linux
        compiler: ": clang-debug-node-v0.10-coverage"
        env: NODE="0.10" TARGET=Debug CC="clang-3.7" CXX="clang++-3.7" COVERAGE=True JOBS=6 PUBLISHABLE=false
