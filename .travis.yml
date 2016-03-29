@@ -18,7 +18,7 @@ matrix:
      # Linux
      - os: linux
        compiler: ": clang-debug-node-v0.10-coverage"
-       env: NODE="0.10" TARGET=Debug CC="clang-3.7" CXX="ccache clang++-3.7 -Qunused-arguments" JOBS=6 PUBLISHABLE=false
+       env: NODE="0.10" TARGET=Debug CC="clang-3.7" CXX="clang++-3.7" JOBS=6 PUBLISHABLE=false
        addons:
          apt:
            sources: [ 'ubuntu-toolchain-r-test', 'llvm-toolchain-precise-3.7' ]
